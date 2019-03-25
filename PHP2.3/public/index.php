@@ -9,11 +9,17 @@ spl_autoload_register([new Autoload(), 'loadClass']);
 
 $product1 = new Products("Чайник", "Это чайник", 1000, 1);
 $product2 = new \app\model\Users();
+$product3 = new Products("Продукт", "Это продукт", 1000, 1);
 
 
 
 var_dump($product1);
-$product1->insertProduct();
 var_dump($product1->getAll());
+$product1->getID();
+$product3->updateProduct([
+    'name' => "Новый продукт",
+    'price' => 1001
+]);
+var_dump($product3->id);
 
 
