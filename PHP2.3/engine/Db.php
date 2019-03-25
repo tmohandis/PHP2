@@ -2,6 +2,7 @@
 
 namespace app\engine;
 
+use app\model\Products;
 use app\traits\Tsingletone;
 
 class Db
@@ -69,5 +70,9 @@ class Db
     {
         return $this->query($sql, $param)->fetchAll();
     }
+
+
+
+
 
 }

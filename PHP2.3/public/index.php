@@ -12,14 +12,10 @@ $product2 = new \app\model\Users();
 $product3 = new Products("Продукт", "Это продукт", 1000, 1);
 
 
-
-var_dump($product1);
-var_dump($product1->getAll());
-$product1->getID();
-$product3->updateProduct([
-    'name' => "Новый продукт",
-    'price' => 1001
-]);
-var_dump($product3->id);
+//var_dump($product1);
+//var_dump($product1->getOne(1));;
+//var_dump($product3->getOneObject(10));;
+$product3->name = "Новый продукт";
+$product3->updateProduct();
 
 
